@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { api } from "@/data/api";
 import { Product } from "@/data/types/product";
 import { env } from "@/env";
@@ -50,6 +52,7 @@ export default async function OgImage({
           flexDirection: "column",
         }}
       >
+        // eslint-disable-next-line @next/next/no-img-element,
         <img src={productImageUrl} alt="" style={{ width: "100%" }} />
       </div>
     ),

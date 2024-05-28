@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CardWidget } from "./card-widget";
 import { SearchForm } from "./search-form";
+import { Suspense } from "react";
 
 export default function Header() {
   return (
@@ -12,7 +13,9 @@ export default function Header() {
           devstore
         </Link>
 
-        <SearchForm />
+        <Suspense fallback={null}>
+          <SearchForm />
+        </Suspense>
       </div>
 
       <div className="flex items-center gap-4">
